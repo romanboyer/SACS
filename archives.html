@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACS - Archives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #f2f2f2; --text-color: #000; }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        header {
+            width: 100%;
+            padding: 2rem 5%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-link img { max-height: 72px; width: auto; }
+        .instagram-link {
+            color: #666;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .instagram-link:hover { color: #000; }
+        main { flex: 1; padding: 2rem 5% 4rem; text-align: center; }
+        h1 { margin: 0 0 2rem; font-size: 1.5rem; text-transform: uppercase; }
+        .carousel {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item { flex: 0 0 min(100%, 420px); scroll-snap-align: center; }
+        .carousel-item img {
+            display: block;
+            width: 100%;
+            max-height: 480px;
+            object-fit: contain;
+        }
+        .carousel-item h2 {
+            margin: 1rem 0 0.35rem;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.045em;
+        }
+        .carousel-item p { margin: 0; color: #666; font-size: 0.9rem; }
+        footer { padding: 1.25rem 5% 1.5rem; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo-link"><img src="./images/logo.png" alt="Logo SACS"></a>
+        <a class="instagram-link" href="https://www.instagram.com/sacsomething/" target="_blank" rel="noopener noreferrer">@sacsomething</a>
+    </header>
+    <main>
+        <div class="carousel" role="region" aria-label="Carrousel des archives">
+            <article class="carousel-item" role="group" aria-roledescription="diapositive" aria-label="1 sur 1">
+                <img src="./images/tee2.png" alt="T-shirt T-SACS">
+                <h2>T-SACS</h2>
+                <p>Pièce d’archive</p>
+            </article>
+        </div>
+    </main>
+    <footer><a class="instagram-link" href="https://www.instagram.com/sacsomething/" target="_blank" rel="noopener noreferrer">@sacsomething</a></footer>
+</body>
+</html>
